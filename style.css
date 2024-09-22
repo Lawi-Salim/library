@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: rgb(56, 255, 238); */
+    background: #e0f7fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.add button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    border: 1px solid beige;
+    margin: 0 0 10px 15px;
+    cursor: pointer;
+    background: #00a8ff;
+    color: #e2e2e2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+select {
+    margin-left: 10px;
+}
+
+.library-book {
+    border: 1px solid black;
+    height: 570px;
+    width: 878px;
+    display: flex;
+    flex-direction: column;
+    background: #e6d192;
+    /* margin-left: 15px; */
+    border-radius: 10px;
+}
+
+.container {
+    /* border: 1px solid greenyellow; */
+    /* padding: 10px; */
+    display: flex;
+    flex-wrap: wrap;
+    height: 460px;
+    width: 815px;
+    box-sizing: border-box;
+    overflow: auto;
+    gap: 10px;
+}
+
+
+/* Personnalisation générale de la scrollbar */
+.container::-webkit-scrollbar {
+    width: 12px;           /* Largeur de la scrollbar */
+    height: 12px;          /* Hauteur de la scrollbar horizontale (si nécessaire) */
+}
+
+/* Style du fond de la scrollbar */
+.container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;   /* Couleur de la piste */
+    border-radius: 10px;         /* Arrondir les coins de la piste */
+}
+
+/* Style de la barre elle-même (le "thumb") */
+.container::-webkit-scrollbar-thumb {
+    background-color: #888;      /* Couleur de la barre */
+    border-radius: 10px;         /* Coins arrondis */
+    border: 2px solid #f1f1f1;   /* Ajout d'une bordure pour plus de contraste */
+}
+
+/* Changement de couleur au survol */
+.container::-webkit-scrollbar-thumb:hover {
+    background-color: #555;      /* Couleur de la barre au survol */
+}
+
+.book-content {
+    /* border: 1px solid red; */
+    width: 260px;
+    height: 280px;
+    padding: 15px;
+}
+
+.book {
+    border: 1px solid #607d8b;
+    background: #e2e2e2;
+    border-radius: 10px;
+    height: 100%;
+    padding: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s ease-out;
+}
+
+.book:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.719);
+    transition: ease-in .9999s;
+}
+
+.book > div {
+    /* border: 1px solid red; */
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.delete button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    border: 1px solid #607d8b;
+    cursor: pointer;
+    background: #00a8ff;
+    color: #e2e2e2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #0073e6;
+    transition: .9s;
+}
+
+.hidden {
+    border: 1px solid black;
+    height: 570px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* margin-left: 35px; */
+    width: 400px;
+    background: #e6d192;
+    animation: apparition 1s ease-in-out;
+}
+
+form {
+    border: 1px solid #607d8b;
+    display: flex;
+    flex-direction: column;
+    background: #e2e2e2;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.5s ease-out;
+}
+
+form:hover {
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.719);
+    transition: ease-in .9999s;
+}
+
+@keyframes apparition {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+form h2 {
+    text-align: center;
+}
+
+form > div {
+    width: 300px;
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+form > div:nth-child(2),
+form > div:nth-child(3),
+form > div:nth-child(4) {
+    border-bottom: 1px solid #607d8b;
+    border-radius: 10px;
+}
+
+form > div > input {
+    margin-left: 10px;
+    width: 75%;
+    height: 40px;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.btn-submit button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    border: 1px solid #607d8b;
+    cursor: pointer;
+    background: #00a8ff;
+    color: #e2e2e2;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.btn-submit button:hover {
+    background: #0073e6;
+    transition: .9s;
+}
+
+.hidden {
+    display: none;
+    position: relative;
+}
+
+.hidden-form {
+    /* border: 1px solid black; */
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.hidden-form button {
+    width: 35px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #607d8b;
+    background: none;
+    border: 3px solid #f1f1f1;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}

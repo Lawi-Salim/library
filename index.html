@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="library-book">
+        <h1>My Library</h1>
+        <div class="add">
+            <button id="add-book">Add book</button>
+        </div>
+        <div class="container" id="container">
+            <div class="book-content">
+                <div id="book" class="book">
+                    <div class="title" id="title">Title : Le petit prince</div>
+                    <div class="author" id="author">Author : Antoine</div>
+                    <div class="nbr-pages" id="pages">Pages : 96</div>
+                    <div class="read">
+                        <label for="">Read : NON</label>
+                        <!-- <select name="" id="">
+                            <option value="">YES</option>
+                            <option value="">NO</option>
+                        </select> -->
+                    </div>
+                    <div id="del" class="delete">
+                        <button class="delete" id="delete">Delete</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Formulaire caché -->
+    <div id="add-book-form" class="hidden">
+        <div class="hidden-form">
+            <button id="form-hidden">X</button>
+        </div>
+        <form id="formulaire">
+            <h2>Add a book</h2>
+            <div class="title">
+                <label for="book-title">Title :</label>
+                <input type="text" id="book-title" name="title" required>
+            </div>
+            
+            <div class="author">
+                <label for="book-author">Author :</label>
+                <input type="text" id="book-author" name="author" required>
+            </div>
+            
+            <div class="pages">
+                <label for="book-pages">Pages :</label>
+                <input type="number" id="book-pages" name="pages" required>
+            </div>
+            
+            <div class="read">
+                <label for="book-read">Read :</label>
+                <select id="book-read" name="read">
+                    <option value="yes">OUI</option>
+                    <option value="no">NON</option>
+                </select>
+            </div>
+            
+            <div class="btn-submit">
+                <button type="submit" id="submit">Add</button>
+                <button type="button" id="cancel">Cancel</button>
+            </div>
+        </form>
+    </div>
+  
+    <script src="javascript.js"></script>
+</body>
+</html>
